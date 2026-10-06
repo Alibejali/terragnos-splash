@@ -9,7 +9,7 @@
  * terragnos shared/livestockWorksheet/publicFaces.ts when opening.
  */
 (function (root) {
-  var PUBLIC_OS_DOOR = "closed";
+  var PUBLIC_OS_DOOR = "open";
   var CONTACT = "https://terragnos.com/contact.html";
   var APP = "https://app.terragnos.com";
   var PATHS = { beef: "/herdflow", sheep: "/herdflow-sheep" };
