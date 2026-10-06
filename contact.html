@@ -86,14 +86,15 @@
   </style>
 </head>
 <body>
+<script src="public-os-door.js"></script>
 <header class="pager-bar">
-  <a class="pager-btn" href="https://app.terragnos.com/herdflow-sheep">← Sheep</a>
+  <a class="pager-btn" data-os-door="sheep" href="https://terragnos.com/contact.html">← Sheep</a>
   <a class="pager-now" href="index.html">Home</a>
-  <a class="pager-btn" href="https://app.terragnos.com/herdflow">Beef →</a>
+  <a class="pager-btn" data-os-door="beef" href="https://terragnos.com/contact.html">Beef →</a>
 </header>
 <main>
   <h1>Notify me of launch</h1>
-  <p class="lede">Leave your name and email. We store the note and write when launch is ready. If this form cannot send, write inquiries@terragnos.com.</p>
+  <p class="lede">The beef and sheep worksheets open at launch. Leave your name and email. We store the note and write when launch is ready. If this form cannot send, write inquiries@terragnos.com.</p>
   <div class="card">
     <p class="form-note" id="formNote"></p>
     <form id="contactForm">
@@ -155,5 +156,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 });
 </script>
+<script>terragnosApplyOsDoor();</script>
 </body>
 </html>
