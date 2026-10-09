@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <title>Terragnos — Sheep worksheet</title>
   <link rel="canonical" href="https://app.terragnos.com/herdflow-sheep" />
-  <noscript><meta http-equiv="refresh" content="0;url=https://app.terragnos.com/herdflow-sheep" /></noscript>
-  <script src="/public-os-door.js?v=open-20261006"></script>
+  <noscript><meta http-equiv="refresh" content="0;url=https://app.terragnos.com/herdflow-sheep?src=qr" /></noscript>
+  <script src="/public-os-door.js?v=open-20261009"></script>
   <script>
     var dest = (typeof terragnosWorksheetEntryHref === "function")
-      ? terragnosWorksheetEntryHref("sheep")
-      : "https://app.terragnos.com/herdflow-sheep";
+      ? terragnosWorksheetEntryHref("sheep", "qr")
+      : "https://app.terragnos.com/herdflow-sheep?src=qr";
     location.replace(dest);
   </script>
 </head>
 <body>
-  <p>Sheep worksheet: <a data-os-door="sheep" href="https://app.terragnos.com/herdflow-sheep">Open the sheep worksheet</a></p>
+  <p>Sheep worksheet: <a data-os-door="sheep" data-os-source="qr" href="https://app.terragnos.com/herdflow-sheep?src=qr">Open the sheep worksheet</a></p>
 </body>
 </html>

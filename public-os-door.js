@@ -14,17 +14,19 @@
   var APP = "https://app.terragnos.com";
   var PATHS = { beef: "/herdflow", sheep: "/herdflow-sheep" };
 
-  function worksheetEntryHref(kind) {
+  function worksheetEntryHref(kind, source) {
     var path = PATHS[kind];
     if (!path) return CONTACT;
-    if (PUBLIC_OS_DOOR === "open") return APP + path;
-    return CONTACT;
+    if (PUBLIC_OS_DOOR !== "open") return CONTACT;
+    var tag = source === "qr" ? "qr" : "web";
+    return APP + path + "?src=" + tag;
   }
 
   function applyOsDoor() {
     var nodes = document.querySelectorAll("[data-os-door]");
     for (var i = 0; i < nodes.length; i++) {
-      nodes[i].setAttribute("href", worksheetEntryHref(nodes[i].getAttribute("data-os-door")));
+      var source = nodes[i].getAttribute("data-os-source") || "web";
+      nodes[i].setAttribute("href", worksheetEntryHref(nodes[i].getAttribute("data-os-door"), source));
     }
   }
 
